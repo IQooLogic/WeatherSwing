@@ -23,8 +23,6 @@ public class WeatherMainFrame extends javax.swing.JFrame implements Thread.Uncau
     private final IpifyClient ipifyClient = new IpifyClient();
     private final IPApiClient iPApiClient = new IPApiClient();
     private final OpenWeatherClient openWeatherClient = new OpenWeatherClient();
-
-//    private final ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
     private final Timer timer = new Timer("MyTimer");
 
     public WeatherMainFrame() throws IOException {
@@ -62,8 +60,6 @@ public class WeatherMainFrame extends javax.swing.JFrame implements Thread.Uncau
                 }
             }
         }, 0, 5 * 60 * 1000);
-
-//        executor.scheduleAtFixedRate(new WeatherSwingWorker(lCurrentTemp, lMaxTemp, lMinTemp), 0, 5, TimeUnit.SECONDS);
     }
 
     @SuppressWarnings("unchecked")
